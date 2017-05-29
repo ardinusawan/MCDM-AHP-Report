@@ -1,26 +1,24 @@
 <template>
   <div id="app">
-  <!--<message> Hello There </message>-->
-    <message></message>
+    <chart></chart>
   </div>
 </template>
 
-<!--<script src="https://www.gstatic.com/charts/loader.js"></script>-->
 
 <script>
 
-  import Message from './components/Message.vue';
+  import Chart from './components/Chart.vue';
 
-export default {
-  name: 'app',
+  export default {
+    name: 'app',
 
-  components: { Message },
+    components: { Chart },
 
-  data () {
-    return {
+    data () {
+      return {
 
+      }
     }
-  }
 }
 </script>
 
