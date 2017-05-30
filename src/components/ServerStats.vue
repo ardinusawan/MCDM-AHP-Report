@@ -1,16 +1,11 @@
 <template>
   <div>
-  <!--<ul v-if="posts && posts.length">-->
-    <!--<li v-for="post in posts">-->
-      <!--<p><strong>{{post.title}}</strong></p>-->
-      <!--<p>{{post.body}}</p>-->
-    <!--</li>-->
-  <!--</ul>-->
     <div class="container">
       CPU
-      <area-chart :data="cpu_stats"></area-chart>
+      <area-chart :data="cpu_stats" :discrete="true" xtitle="Time" ytitle="Percentage" :refresh="60"></area-chart>
       Memory
-      <area-chart :data="memory_stats"></area-chart>
+      <area-chart :data="memory_stats" :discrete="true" xtitle="Time" ytitle="Megabyte" :refresh="60"></area-chart>
+
     </div>
   <ul v-if="errors && errors.length">
     <li v-for="error in errors">

@@ -9,10 +9,15 @@ Vue.use(VueChartkick, { Chartkick });
 
 const router = new VueRouter({
   mode: 'history',
-  routers: [{
-    path: 'result',
-    component: require('./components/Result.vue')
-  }]
+  routes: [{
+      path: '/result',
+      component: require('./components/Result.vue')
+  },
+    {
+      path: '/server-stats',
+      component: require('./components/ServerStats.vue')
+    }
+  ]
 })
 
 new Vue({
