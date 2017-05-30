@@ -1,5 +1,5 @@
 <template>
-  <div id="charts">
+  <div>
   <!--<ul v-if="posts && posts.length">-->
     <!--<li v-for="post in posts">-->
       <!--<p><strong>{{post.title}}</strong></p>-->
@@ -8,9 +8,9 @@
   <!--</ul>-->
     <div class="container">
       CPU
-      <line-chart :data="cpu_stats"></line-chart>
+      <area-chart :data="cpu_stats"></area-chart>
       Memory
-      <line-chart :data="memory_stats"></line-chart>
+      <area-chart :data="memory_stats"></area-chart>
     </div>
   <ul v-if="errors && errors.length">
     <li v-for="error in errors">

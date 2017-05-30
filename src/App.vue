@@ -1,18 +1,23 @@
 <template>
   <div id="app">
-    <chart></chart>
+    <server-stats></server-stats>
+    <router-view></router-view>
   </div>
 </template>
 
 
 <script>
 
-  import Chart from './components/Chart.vue';
+  import ServerStats from './components/ServerStats.vue';
+  import Result from './components/Result.vue';
 
   export default {
     name: 'app',
 
-    components: { Chart },
+    components: {
+        ServerStats,
+        Result
+    },
 
     data () {
       return {
